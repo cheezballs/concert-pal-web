@@ -24,4 +24,4 @@ jobs:
         FTP_USERNAME: ftpuser
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: ./dist
-        ARGS: set ssl:verify-certificate false; set ftp:ssl-force true
+        ARGS: set ftp:ssl-allow true; set ssl:verify-certificate false; set ftp:ssl-auth TLS; set ftp:ssl-force true
