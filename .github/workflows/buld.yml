@@ -24,4 +24,4 @@ jobs:
         FTP_USERNAME: ftpuser
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: ./dist
-        ARGS: -e "ssl:verify-certificate false"
+        ARGS: ssl:verify-certificate false ;
