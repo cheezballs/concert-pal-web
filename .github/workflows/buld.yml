@@ -17,3 +17,12 @@ jobs:
       run: npm install     
     - name: Build
       run: npm run build -- --prod    
+    - name: FTP To Server
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: ftp.myconcertpal.com
+        FTP_USERNAME: ftpuser
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCAL_DIR: /dist
+        ARGS: --delete
+        # --delete arg will delete files on the server if you've deleted them in git
