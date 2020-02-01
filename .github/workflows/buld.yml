@@ -23,6 +23,6 @@ jobs:
         FTP_SERVER: ftp.myconcertpal.com
         FTP_USERNAME: ftpuser
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        LOCAL_DIR: /dist
+        LOCAL_DIR: ./dist
         ARGS: --delete
         # --delete arg will delete files on the server if you've deleted them in git
